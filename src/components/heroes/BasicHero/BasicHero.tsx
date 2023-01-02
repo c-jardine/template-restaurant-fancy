@@ -1,24 +1,27 @@
-import { AbsoluteCenter, Box, Button, Stack, Text } from '@chakra-ui/react';
-import { Estonia } from '@next/font/google';
-import Image from 'next/image';
-import heroImg from '../../../../public/images/bar-header.jpg';
+import { AbsoluteCenter, Box } from '@chakra-ui/react';
+import Image, { StaticImageData } from 'next/image';
+import React from 'react';
 
-const estonia = Estonia({ weight: '400' });
+export interface BasicHeroProps {
+  img: StaticImageData;
+  height?: number | string;
+  children: React.ReactNode;
+}
 
-const BasicHero = () => {
+const BasicHero = (props: BasicHeroProps) => {
   return (
-    <Box position='relative' w='full' h='100vh'>
+    <Box position='relative' w='full' h={props.height || '100vh'}>
       <AbsoluteCenter w='full' h='full'>
         <Box position='relative' w='full' h='full'>
           <Image
-            src={heroImg}
+            src={props.img}
             alt='Header image'
             fill
             style={{ objectFit: 'cover' }}
           />
         </Box>
       </AbsoluteCenter>
-      <AbsoluteCenter w='full' h='100vh' bg='black' opacity={0.8} />
+      <AbsoluteCenter w='full' h='full' bg='black' opacity={0.7} />
       <AbsoluteCenter
         display='flex'
         w='full'
@@ -26,27 +29,7 @@ const BasicHero = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <Stack alignItems='center' spacing={16}>
-          <Box textAlign='center'>
-            <Text
-              className={estonia.className}
-              fontSize={['5xl', '7xl']}
-              color='white'
-              textAlign='center'
-            >
-              Riverfront Bistro
-            </Text>
-            <Text mt={-1} textTransform='uppercase' letterSpacing={1}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit
-            </Text>
-          </Box>
-          <Stack direction={{ base: 'column', sm: 'row' }}>
-            <Button variant='outline'>View the menu</Button>
-            <Button variant='solid' colorScheme='primary'>
-              Make a reservation
-            </Button>
-          </Stack>
-        </Stack>
+        {props.children}
       </AbsoluteCenter>
     </Box>
   );

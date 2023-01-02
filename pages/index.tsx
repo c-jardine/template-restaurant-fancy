@@ -8,7 +8,11 @@ import {
 } from '@chakra-ui/react';
 import { BlockLink } from '../src/components/core';
 import { BasicHero, SplitHero } from '../src/components/heroes';
-import { MosaicDetails, SimpleFeaturesGrid } from '../src/components/sections';
+import {
+  HomeHero,
+  MosaicDetails,
+  SimpleFeaturesGrid,
+} from '../src/components/sections';
 import { Cormorant_Garamond, Estonia } from '@next/font/google';
 import Image from 'next/image';
 import seatingImg from '../public/images/seating.jpg';
@@ -20,7 +24,7 @@ const estonia = Estonia({ weight: '400' });
 const Home = () => {
   return (
     <Stack spacing={32} alignItems='center'>
-      <BasicHero />
+      <HomeHero />
       <SplitHero
         leftContent={
           <Stack spacing={6} py={{ base: 0, md: 16 }}>
