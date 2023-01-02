@@ -6,15 +6,15 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import { Cormorant_Garamond } from '@next/font/google';
-import { BlockLink } from '../../core';
+import { Estonia } from '@next/font/google';
+import Image from 'next/image';
 import chefImg from '../../../../public/images/chef-prep.jpg';
 import meal1 from '../../../../public/images/meal-1.jpeg';
 import meal2 from '../../../../public/images/meal-2.jpg';
 import meal3 from '../../../../public/images/meal-3.jpg';
-import Image from 'next/image';
+import { BlockLink } from '../../core';
 
-const serif = Cormorant_Garamond({ weight: '300' });
+const estonia = Estonia({ weight: '400' });
 
 const MosaicDetails = () => {
   return (
@@ -29,7 +29,7 @@ const MosaicDetails = () => {
             <Image src={chefImg} alt='' fill style={{ objectFit: 'cover' }} />
           </Box>
           <Stack spacing={4} p={12} justifyContent='center'>
-            <Text className={serif.className} fontSize='4xl' lineHeight={1}>
+            <Text className={estonia.className} fontSize='5xl' lineHeight={1}>
               Sit amet consectetur
             </Text>
             <Text>
@@ -42,7 +42,7 @@ const MosaicDetails = () => {
             <Image src={meal1} alt='' fill style={{ objectFit: 'cover' }} />
           </Box>
           <Stack spacing={4} p={12} justifyContent='center'>
-            <Text className={serif.className} fontSize='4xl' lineHeight={1}>
+            <Text className={estonia.className} fontSize='5xl' lineHeight={1}>
               Neque deserunt suscipit
             </Text>
             <Text>
@@ -55,7 +55,7 @@ const MosaicDetails = () => {
             <Image src={meal2} alt='' fill style={{ objectFit: 'cover' }} />
           </Box>
           <Stack spacing={4} p={12} justifyContent='center'>
-            <Text className={serif.className} fontSize='4xl' lineHeight={1}>
+            <Text className={estonia.className} fontSize='5xl' lineHeight={1}>
               Optio quasi atque
             </Text>
             <Text>
@@ -86,20 +86,28 @@ const MosaicDetails = () => {
               <Image src={meal1} alt='' fill style={{ objectFit: 'cover' }} />
             </Box>
             <Stack spacing={4} p={{ base: 4, md: 16 }} justifyContent='center'>
-              <Text className={serif.className} fontSize='4xl' lineHeight={1}>
+              <Text
+                className={estonia.className}
+                fontSize={{ base: '4xl', md: '6xl' }}
+                lineHeight={1}
+              >
                 Sit amet consectetur
               </Text>
-              <Text>
+              <Text color='whiteAlpha.800'>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Deleniti at enim, consequuntur repellendus, molestiae.
               </Text>
               <BlockLink href='#'>Learn more</BlockLink>
             </Stack>
             <Stack spacing={4} p={{ base: 4, md: 16 }} justifyContent='center'>
-              <Text className={serif.className} fontSize='4xl' lineHeight={1}>
+              <Text
+                className={estonia.className}
+                fontSize={{ base: '4xl', md: '6xl' }}
+                lineHeight={1}
+              >
                 Neque deserunt suscipit
               </Text>
-              <Text>
+              <Text color='whiteAlpha.800'>
                 Voluptatibus, accusantium culpa. Veritatis vitae, molestiae
                 aperiam asperiores sint illo distinctio eius voluptates.
               </Text>
@@ -113,10 +121,14 @@ const MosaicDetails = () => {
             </Box>
 
             <Stack spacing={4} p={{ base: 4, md: 16 }} justifyContent='center'>
-              <Text className={serif.className} fontSize='4xl' lineHeight={1}>
+              <Text
+                className={estonia.className}
+                fontSize={{ base: '4xl', md: '6xl' }}
+                lineHeight={1}
+              >
                 Optio quasi atque
               </Text>
-              <Text>
+              <Text color='whiteAlpha.800'>
                 Minus nostrum ex doloribus illum reiciendis sunt dolorum cumque
                 quo, autem atque. Obcaecati corrupti numquam ad placeat.
               </Text>
