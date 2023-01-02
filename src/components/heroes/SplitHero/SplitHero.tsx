@@ -1,12 +1,14 @@
-import { Container, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react';
+import { Box, Container, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import { Cormorant_Garamond } from '@next/font/google';
+import Image from 'next/image';
 import { BlockLink } from '../../core';
+import seatingImg from '../../../../public/images/seating.jpg';
 
 const serif = Cormorant_Garamond({ weight: '300' });
 
 const SplitHero = () => {
   return (
-    <Container py={28} maxW='7xl' w='full'>
+    <Container maxW='7xl' w='full'>
       <SimpleGrid
         columns={{ base: 1, md: 2, xl: 5 }}
         gap={16}
@@ -15,6 +17,7 @@ const SplitHero = () => {
         <Stack
           gridColumn={{ base: '1', md: '1', xl: '1 / span 2' }}
           spacing={6}
+          py={{ base: 0, md: 16 }}
         >
           <Text
             fontWeight='semibold'
@@ -25,7 +28,7 @@ const SplitHero = () => {
           </Text>
           <Text
             className={serif.className}
-            fontSize='6xl'
+            fontSize={{ base: '4xl', md: '6xl' }}
             lineHeight={1}
             letterSpacing={2}
             textTransform='uppercase'
@@ -40,15 +43,15 @@ const SplitHero = () => {
           </Text>
           <BlockLink href='#'>Learn more</BlockLink>
         </Stack>
-        <Image
-          src='https://unsplash.com/photos/ZgREXhl8ER0/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcyNjE2NzAw&force=true&w=1920'
-          alt=''
-          h='75vh'
+        <Box
+          position='relative'
           w='full'
-          objectFit='cover'
-          objectPosition='bottom'
+          h='full'
+          minH='sm'
           gridColumn={{ base: '1', md: '2', xl: '3 / span 3' }}
-        />
+        >
+          <Image src={seatingImg} alt='' fill style={{ objectFit: 'cover' }} />
+        </Box>
       </SimpleGrid>
     </Container>
   );

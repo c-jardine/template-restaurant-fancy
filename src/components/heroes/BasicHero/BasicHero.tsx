@@ -1,26 +1,23 @@
-import {
-  AbsoluteCenter,
-  Box,
-  Button,
-  Image,
-  Stack,
-  Text
-} from '@chakra-ui/react';
+import { AbsoluteCenter, Box, Button, Stack, Text } from '@chakra-ui/react';
 import { Estonia } from '@next/font/google';
+import Image from 'next/image';
+import heroImg from '../../../../public/images/bar-header.jpg';
 
 const estonia = Estonia({ weight: '400' });
 
 const BasicHero = () => {
   return (
-    <Box position='relative'>
-      <Image
-        src='https://unsplash.com/photos/GXXYkSwndP4/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcyNjEwMzQ3&force=true&w=1920'
-        alt=''
-        maxW='1920px'
-        w='full'
-        h='100vh'
-        objectFit='cover'
-      />
+    <Box position='relative' w='full' h='100vh'>
+      <AbsoluteCenter w='full' h='full'>
+        <Box position='relative' w='full' h='full'>
+          <Image
+            src={heroImg}
+            alt='Header image'
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+        </Box>
+      </AbsoluteCenter>
       <AbsoluteCenter w='full' h='100vh' bg='black' opacity={0.8} />
       <AbsoluteCenter
         display='flex'
@@ -30,7 +27,7 @@ const BasicHero = () => {
         alignItems='center'
       >
         <Stack alignItems='center' spacing={16}>
-          <Box>
+          <Box textAlign='center'>
             <Text
               className={estonia.className}
               fontSize={['5xl', '7xl']}
@@ -39,7 +36,7 @@ const BasicHero = () => {
             >
               Riverfront Bistro
             </Text>
-            <Text mt={-2} textTransform='uppercase' letterSpacing={1}>
+            <Text mt={-1} textTransform='uppercase' letterSpacing={1}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit
             </Text>
           </Box>

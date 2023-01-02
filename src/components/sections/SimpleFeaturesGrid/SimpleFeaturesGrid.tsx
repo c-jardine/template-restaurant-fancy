@@ -1,58 +1,75 @@
-import { Box, Container, Image, SimpleGrid, Stack } from '@chakra-ui/react';
+import { Box, Container, SimpleGrid, Stack } from '@chakra-ui/react';
+import Image from 'next/image';
 import { BlockLink } from '../../core';
+import foodMenu from '../../../../public/images/food.jpg';
+import drinkMenu from '../../../../public/images/bar.jpg';
+import dessertMenu from '../../../../public/images/dessert.jpg';
+import specialsMenu from '../../../../public/images/specials-board.jpg';
 
 const SimpleFeaturesGrid = () => {
   return (
-    <Box py={28}>
-      <Container maxW='7xl' w='full'>
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 4 }} gap={8}>
-          <Stack alignItems='center'>
+    <Container maxW='8xl' w='full'>
+      <SimpleGrid columns={{ base: 1, md: 2, xl: 4 }} gap={8}>
+        <Stack alignItems='center'>
+          <Box
+            position='relative'
+            w='full'
+            minH='sm'
+            borderWidth={2}
+            borderColor='primary.600'
+          >
+            <Image src={foodMenu} alt='' fill style={{ objectFit: 'cover' }} />
+          </Box>
+          <BlockLink href='#'>Food Menu</BlockLink>
+        </Stack>
+        <Stack alignItems='center'>
+          <Box
+            position='relative'
+            w='full'
+            minH='sm'
+            borderWidth={2}
+            borderColor='primary.600'
+          >
+            <Image src={drinkMenu} alt='' fill style={{ objectFit: 'cover' }} />
+          </Box>
+          <BlockLink href='#'>Drink Menu</BlockLink>
+        </Stack>
+        <Stack alignItems='center'>
+          <Box
+            position='relative'
+            w='full'
+            minH='sm'
+            borderWidth={2}
+            borderColor='primary.600'
+          >
             <Image
-              src='https://unsplash.com/photos/KO46ZfbNdtY/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8OHx8Zm9vZCUyMHJlc3RhdXJhbnR8ZW58MHx8fHwxNjcyNjAyMTA4&force=true&w=1920'
+              src={dessertMenu}
               alt=''
-              w='full'
-              maxH='container.sm'
-              h='full'
-              objectFit='cover'
+              fill
+              style={{ objectFit: 'cover' }}
             />
-            <BlockLink href='#'>Food Menu</BlockLink>
-          </Stack>
-          <Stack alignItems='center'>
+          </Box>
+          <BlockLink href='#'>Desserts</BlockLink>
+        </Stack>
+        <Stack alignItems='center'>
+          <Box
+            position='relative'
+            w='full'
+            minH='sm'
+            borderWidth={2}
+            borderColor='primary.600'
+          >
             <Image
-              src='https://unsplash.com/photos/QYWYnzvPTAQ/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcyNjI4MDYw&force=true&w=1920'
+              src={specialsMenu}
               alt=''
-              w='full'
-              maxH='container.sm'
-              h='full'
-              objectFit='cover'
+              fill
+              style={{ objectFit: 'cover' }}
             />
-            <BlockLink href='#'>Drink Menu</BlockLink>
-          </Stack>
-          <Stack alignItems='center'>
-            <Image
-              src='https://unsplash.com/photos/_BUlk40NTNU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8OHx8ZGVzc2VydHMlMjByZXN0YXVyYW50fGVufDB8fHx8MTY3MjYyODA4Nw&force=true&w=1920'
-              alt=''
-              w='full'
-              maxH='container.sm'
-              h='full'
-              objectFit='cover'
-            />
-            <BlockLink href='#'>Desserts</BlockLink>
-          </Stack>
-          <Stack alignItems='center'>
-            <Image
-              src='https://unsplash.com/photos/7RVP-1-ZbOU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MjR8fHJlc3RhdXJhbnQlMjBzcGVjaWFsc3xlbnwwfHx8fDE2NzI2MjgxMzQ&force=true&w=1920'
-              alt=''
-              w='full'
-              maxH='container.sm'
-              h='full'
-              objectFit='cover'
-            />
-            <BlockLink href='#'>Specials</BlockLink>
-          </Stack>
-        </SimpleGrid>
-      </Container>
-    </Box>
+          </Box>
+          <BlockLink href='#'>Specials</BlockLink>
+        </Stack>
+      </SimpleGrid>
+    </Container>
   );
 };
 export default SimpleFeaturesGrid;

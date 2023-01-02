@@ -85,7 +85,7 @@ const BasicNavbar = () => {
       w='full'
       bg={scrollPos <= 0 ? 'transparent' : 'blackAlpha.700'}
       backdropFilter={scrollPos <= 0 ? 'none' : 'blur(8px)'}
-      transition='250ms ease-in-out'
+      transition='200ms ease-in-out'
     >
       <Flex
         // bg={useColorModeValue('white', 'gray.800')}'
@@ -243,20 +243,21 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
-            transition={'all .3s ease'}
+            transition={'all 200ms ease'}
             color='white'
             textTransform='uppercase'
             letterSpacing={1}
             fontSize='sm'
             _groupHover={{ color: 'primary.500' }}
-            fontWeight={500}
           >
             {label}
           </Text>
-          <Text fontSize='xs' color='gray.400'>{subLabel}</Text>
+          <Text fontSize='sm' color='gray.400'>
+            {subLabel}
+          </Text>
         </Box>
         <Flex
-          transition={'all .3s ease'}
+          transition={'all 200ms ease'}
           transform={'translateX(-10px)'}
           opacity={0}
           _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
@@ -309,7 +310,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         {children && (
           <Icon
             as={FaChevronDown}
-            transition={'all .25s ease-in-out'}
+            transition={'all 200ms ease-in-out'}
             transform={isOpen ? 'rotate(180deg)' : ''}
             w={3}
             h={3}
@@ -317,7 +318,11 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         )}
       </Flex>
 
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
+      <Collapse
+        in={isOpen}
+        animateOpacity
+        style={{ marginTop: '0 !important' }}
+      >
         <Stack
           mt={2}
           pl={4}
