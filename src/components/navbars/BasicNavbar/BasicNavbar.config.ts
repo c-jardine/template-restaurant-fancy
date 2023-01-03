@@ -11,17 +11,17 @@ export const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'From the kitchen',
         subLabel: 'Delicious food, pleasant atmosphere',
-        href: '/menu',
+        href: '/food',
       },
       {
         label: 'At the bar',
         subLabel: 'Spirits, craft beers, and seltzers',
-        href: '/menu#drinks',
+        href: '/drinks',
       },
       {
         label: 'Catering',
         subLabel: 'Let us make your event memorable',
-        href: '/menu#catering',
+        href: '#',
       },
     ],
   },

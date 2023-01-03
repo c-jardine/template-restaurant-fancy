@@ -1,10 +1,10 @@
 import { Stack } from '@chakra-ui/react';
-import { FoodMenu, MenuHero } from '../src/components/sections';
+import { FoodHero, FoodMenu } from '../src/components/sections';
 
 const Menu = () => {
   return (
     <Stack spacing={32} alignItems='center'>
-      <MenuHero />
+      <FoodHero />
       <FoodMenu />
     </Stack>
   );

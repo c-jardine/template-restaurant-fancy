@@ -1,22 +1,22 @@
-import { Stack, Divider, Text } from '@chakra-ui/react';
-import { BasicHero } from '../../../heroes';
+import { Divider, Stack, Text } from '@chakra-ui/react';
+import { Cormorant_Garamond } from '@next/font/google';
 import heroImg from '../../../../../public/images/meal-2.jpg';
-import { Estonia } from '@next/font/google';
+import { BasicHero } from '../../../heroes';
 
-const estonia = Estonia({ weight: '400' });
+const serif = Cormorant_Garamond({ weight: '300' });
 
-const MenuHero = () => {
+const FoodHero = () => {
   return (
     <BasicHero img={heroImg} height='50vh'>
       <Stack mt={16} alignItems='center' spacing={8}>
         <Text
-          className={estonia.className}
+          className={serif.className}
           as='h1'
-          fontSize={{ base: '4xl', md: '6xl' }}
+          fontSize='4xl'
           textTransform='uppercase'
           lineHeight={0.85}
         >
-          View our menus
+          Food Menu
         </Text>
         <Divider borderBottomWidth={2} color='primary.500' maxW={32} />
         <Text>We have something for everyone</Text>
@@ -24,4 +24,4 @@ const MenuHero = () => {
     </BasicHero>
   );
 };
-export default MenuHero;
+export default FoodHero;

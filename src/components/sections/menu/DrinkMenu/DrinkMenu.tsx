@@ -7,19 +7,17 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
+import { Cormorant_Garamond } from '@next/font/google';
 import { CategoryHeaderProps } from '../Menu.types';
 import {
-  Appetizers,
-  Entrees,
-  LighterFare,
-  Sides,
-  Specialty,
-} from './FoodMenu.config';
-import { FoodMenuItemProps, FoodMenuItemsProps } from './FoodMenu.types';
-import { Cormorant_Garamond } from '@next/font/google';
+  BottledBeer,
+  Cocktails,
+  CraftBeer,
+  OnTapBeer,
+} from './DrinkMenu.config';
+import { DrinkMenuItemProps, DrinkMenuItemsProps } from './DrinkMenu.types';
 
 const serif = Cormorant_Garamond({ weight: '300' });
-
 
 const CategoryHeader = (props: CategoryHeaderProps) => {
   return (
@@ -38,7 +36,7 @@ const CategoryHeader = (props: CategoryHeaderProps) => {
   );
 };
 
-const MenuSection = (props: FoodMenuItemsProps) => {
+const MenuSection = (props: DrinkMenuItemsProps) => {
   return (
     <Stack spacing={6} w='full'>
       <CategoryHeader>{props.category}</CategoryHeader>
@@ -51,39 +49,40 @@ const MenuSection = (props: FoodMenuItemsProps) => {
   );
 };
 
-const MenuItem = (props: FoodMenuItemProps) => {
+const MenuItem = (props: DrinkMenuItemProps) => {
   return (
     <HStack key={props.name} alignItems='flex-start'>
-      <Stack flexGrow={1}>
+      <Stack flexGrow={1} justifyContent='center'>
         <Text className={serif.className} fontSize='xl' lineHeight={1}>
           {props.name}
         </Text>
-        <Text color='whiteAlpha.700'>{props.description}</Text>
+        {props.description && (
+          <Text color='whiteAlpha.700'>{props.description}</Text>
+        )}
       </Stack>
-      <Text pt={1} color='primary.500' fontWeight='semibold'>
+      <Text color='primary.500' fontWeight='semibold'>
         {props.price}
       </Text>
     </HStack>
   );
 };
 
-const FoodMenu = () => {
+const DrinkMenu = () => {
   return (
-    <Container maxW='7xl' w='full'>
+    <Container id='drinks' scrollMarginTop={24} maxW='7xl' w='full'>
       <SimpleGrid columns={{ base: 1, lg: 3 }} gap={16}>
         <VStack spacing={16}>
-          <MenuSection {...Appetizers} />
-          <MenuSection {...Sides} />
+          <MenuSection {...OnTapBeer} />
+          <MenuSection {...BottledBeer} />
         </VStack>
         <VStack spacing={16}>
-          <MenuSection {...Specialty} />
-          <MenuSection {...LighterFare} />
+          <MenuSection {...CraftBeer} />
         </VStack>
         <VStack spacing={16}>
-          <MenuSection {...Entrees} />
+          <MenuSection {...Cocktails} />
         </VStack>
       </SimpleGrid>
     </Container>
   );
 };
-export default FoodMenu;
+export default DrinkMenu;

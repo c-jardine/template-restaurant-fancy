@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface FoodMenuItemProps {
   name: string;
   description: string;
@@ -9,8 +7,4 @@ export interface FoodMenuItemProps {
 export interface FoodMenuItemsProps {
   category: string;
   items: FoodMenuItemProps[];
-}
-
-export interface CategoryHeaderProps {
-  children: React.ReactNode;
 }

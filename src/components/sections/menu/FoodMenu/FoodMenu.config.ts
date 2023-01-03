@@ -20,11 +20,6 @@ export const Appetizers: FoodMenuItemsProps = {
       price: 14,
     },
     {
-      name: 'Humbolt Fog Goat Cheese',
-      description: 'Pecans, roasted pear, dried cherries, field greens',
-      price: 11,
-    },
-    {
       name: 'Butternut Squash Soup',
       description: 'Pepitas, apple fennel, compote, pumpkin oil',
       price: 8,
