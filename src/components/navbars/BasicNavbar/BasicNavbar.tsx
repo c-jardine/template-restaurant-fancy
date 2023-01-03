@@ -22,20 +22,12 @@ import { MdClose } from '@react-icons/all-files/md/MdClose';
 import React from 'react';
 import { NAV_ITEMS } from './BasicNavbar.config';
 import { NavItem } from './BasicNavbar.types';
+import { GiKnifeFork } from '@react-icons/all-files/gi/GiKnifeFork';
 
 const estonia = Estonia({ weight: '400' });
 
 const Logo = () => {
-  return (
-    <Text
-      className={estonia.className}
-      lineHeight={0.5}
-      fontSize='6xl'
-      color='primary.500'
-    >
-      RB
-    </Text>
-  );
+  return <Icon as={GiKnifeFork} color='white' w={10} h={10} />;
 };
 
 const BasicNavbar = () => {
