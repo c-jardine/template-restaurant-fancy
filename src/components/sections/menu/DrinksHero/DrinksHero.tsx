@@ -1,6 +1,7 @@
-import { Divider, Stack, Text } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 import { Cormorant_Garamond } from '@next/font/google';
 import heroImg from '../../../../../public/images/bar.jpg';
+import { IconDivider } from '../../../core';
 import { BasicHero } from '../../../heroes';
 
 const serif = Cormorant_Garamond({ weight: '300' });
@@ -18,7 +19,7 @@ const DrinksHero = () => {
         >
           Drink Menu
         </Text>
-        <Divider borderBottomWidth={2} color='primary.500' maxW={32} />
+        <IconDivider />
         <Text>Mixing up happiness</Text>
       </Stack>
     </BasicHero>

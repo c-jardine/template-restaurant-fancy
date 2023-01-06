@@ -47,7 +47,7 @@ const TextareaInput = () => {
 
 const ContactPage: NextPage = () => {
   return (
-    <Stack spacing={16} alignItems='center'>
+    <Stack spacing={28} alignItems='center'>
       <ContactHero />
       <Container maxW='7xl' w='full'>
         <SimpleGrid columns={{ base: 1, lg: 2 }} gap={16} w='full'>

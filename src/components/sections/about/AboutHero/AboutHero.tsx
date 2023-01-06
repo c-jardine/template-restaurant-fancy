@@ -1,12 +1,12 @@
 import { Stack, Text } from '@chakra-ui/react';
 import { Cormorant_Garamond } from '@next/font/google';
-import heroImg from '../../../../../public/images/meal-2.jpg';
+import heroImg from '../../../../../public/images/front-of-house.jpg';
 import { IconDivider } from '../../../core';
 import { BasicHero } from '../../../heroes';
 
 const serif = Cormorant_Garamond({ weight: '300' });
 
-const ContactHero = () => {
+const AboutHero = () => {
   return (
     <BasicHero img={heroImg} height='50vh'>
       <Stack mt={16} alignItems='center' spacing={8}>
@@ -17,12 +17,12 @@ const ContactHero = () => {
           textTransform='uppercase'
           lineHeight={0.85}
         >
-          Contact Us
+          About Us
         </Text>
         <IconDivider />
-        <Text>Get in touch with the restaurant</Text>
+        <Text>Lorem ipsum dolor sit, amet consectetur</Text>
       </Stack>
     </BasicHero>
   );
 };
-export default ContactHero;
+export default AboutHero;

@@ -1,9 +1,9 @@
-import React from 'react';
-import { BasicHero } from '../../../heroes';
-import heroImg from '../../../../../public/images/bar-header.jpg';
-import { Box, Text, Stack, Button } from '@chakra-ui/react';
+import { Box, Button, Stack, Text } from '@chakra-ui/react';
 import { Estonia } from '@next/font/google';
 import { useRouter } from 'next/router';
+import heroImg from '../../../../../public/images/bar-header.jpg';
+import { IconDivider } from '../../../core';
+import { BasicHero } from '../../../heroes';
 
 const estonia = Estonia({ weight: '400' });
 
@@ -14,6 +14,7 @@ const HomeHero = () => {
     <BasicHero img={heroImg}>
       <Stack alignItems='center' spacing={16}>
         <Box textAlign='center'>
+          <IconDivider />
           <Text
             className={estonia.className}
             fontSize={['5xl', '7xl']}

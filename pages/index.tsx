@@ -1,22 +1,14 @@
-import {
-  Box,
-  Divider,
-  HStack,
-  SimpleGrid,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Divider, HStack, Stack, Text } from '@chakra-ui/react';
+import { Cormorant_Garamond, Estonia } from '@next/font/google';
+import Image from 'next/image';
+import seatingImg from '../public/images/seating.jpg';
 import { BlockLink } from '../src/components/core';
-import { BasicHero, SplitHero } from '../src/components/heroes';
+import { SplitHero } from '../src/components/heroes';
 import {
   HomeHero,
   MosaicDetails,
   SimpleFeaturesGrid,
 } from '../src/components/sections';
-import { Cormorant_Garamond, Estonia } from '@next/font/google';
-import Image from 'next/image';
-import seatingImg from '../public/images/seating.jpg';
-import riverImg from '../public/images/river.jpg';
 
 const serif = Cormorant_Garamond({ weight: '300' });
 const estonia = Estonia({ weight: '400' });
