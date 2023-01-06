@@ -3,10 +3,13 @@ import { BasicHero } from '../../../heroes';
 import heroImg from '../../../../../public/images/bar-header.jpg';
 import { Box, Text, Stack, Button } from '@chakra-ui/react';
 import { Estonia } from '@next/font/google';
+import { useRouter } from 'next/router';
 
 const estonia = Estonia({ weight: '400' });
 
 const HomeHero = () => {
+  const router = useRouter();
+
   return (
     <BasicHero img={heroImg}>
       <Stack alignItems='center' spacing={16}>
@@ -24,7 +27,9 @@ const HomeHero = () => {
           </Text>
         </Box>
         <Stack direction={{ base: 'column', sm: 'row' }}>
-          <Button variant='outline'>View the menu</Button>
+          <Button variant='outline' onClick={() => router.push('/food')}>
+            View the menu
+          </Button>
           <Button variant='solid' colorScheme='primary'>
             Make a reservation
           </Button>

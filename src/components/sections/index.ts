@@ -1,6 +1,7 @@
 export * from './Footer';
 export * from './MosaicDetails';
 export * from './SimpleFeaturesGrid';
+export * from './contact/ContactHero';
 export * from './home/HomeHero';
 export * from './home';
 export * from './menu/DrinkMenu';

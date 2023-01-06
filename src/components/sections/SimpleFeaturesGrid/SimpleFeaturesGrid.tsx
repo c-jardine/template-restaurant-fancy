@@ -20,7 +20,7 @@ const SimpleFeaturesGrid = () => {
           >
             <Image src={foodMenu} alt='' fill style={{ objectFit: 'cover' }} />
           </Box>
-          <BlockLink href='#'>Food Menu</BlockLink>
+          <BlockLink href='/food'>Food Menu</BlockLink>
         </Stack>
         <Stack alignItems='center'>
           <Box
@@ -32,7 +32,7 @@ const SimpleFeaturesGrid = () => {
           >
             <Image src={drinkMenu} alt='' fill style={{ objectFit: 'cover' }} />
           </Box>
-          <BlockLink href='#'>Drink Menu</BlockLink>
+          <BlockLink href='/drinks'>Drink Menu</BlockLink>
         </Stack>
         <Stack alignItems='center'>
           <Box
